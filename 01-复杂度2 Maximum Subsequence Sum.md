@@ -25,7 +25,7 @@ For each test case, output in one line the largest sum, together with the first 
 
 ### Answers
 
-First try:
+#### First try:
 
 ```c
 #include<stdio.h>
@@ -70,13 +70,13 @@ int main()
 }
 ```
 
-Screenshot:
+#### Screenshot:
 
 ![01-复杂度2 Maximum Subsequence Sum test1](D:\学习笔记\数据结构与算法\PATtrainning\提交截图\01-复杂度2 Maximum Subsequence Sum test1.png)
 
 问题很多，与第一题不一样，这里的数据有很多负数，需要使用另外的计算方法，不能套用第一题的方法，留个尾巴，明早再战
 
-Second try:
+#### Second try:
 
 ```c
 #include<stdio.h>
@@ -137,13 +137,13 @@ int main()
 }
 ```
 
-Screenshot:
+#### Screenshot:
 
 ![01-复杂度2 Maximum Subsequence Sum test2](提交截图/01-复杂度2 Maximum Subsequence Sum test2.png)
 
 修好了负数的问题，但是并列多解的部分还是不会
 
-Third try:
+#### Third try:
 
 ```c
 #include<stdio.h>
@@ -206,13 +206,13 @@ int main()
 }
 ```
 
-screenshot:
+#### screenshot:
 
 ![01-复杂度2 Maximum Subsequence Sum test3](提交截图/01-复杂度2 Maximum Subsequence Sum test3.png)
 
 百度了一下，发现自己审题审错了，之前以为所有并列的解需要全部输出，重新审题发现只需要输出index最小的子列即可，修改后还差负数和0没有处理正确。
 
-Fourth try:
+#### Fourth try:
 
 ```c
 #include<stdio.h>
@@ -275,7 +275,7 @@ int main()
 }
 ```
 
-screenshot:
+#### screenshot:
 
 ![01-复杂度2 Maximum Subsequence Sum test4](提交截图/01-复杂度2 Maximum Subsequence Sum test4.png)
 

@@ -41,7 +41,7 @@ For each case, output the resulting ordered linked list. Each node occupies a li
 
 ### Answers:
 
-First try:
+#### First try:
 
 ```c
 #include<stdio.h>
@@ -111,13 +111,13 @@ int main()
 }
 ```
 
-Screenshot:
+#### ScreenShot:
 
-![02-线性结构2 Reversing Linked List test 1](提交截图/02-线性结构2 Reversing Linked List test 1.png)
+![02-线性结构2 Reversing Linked List test1](提交截图/02-线性结构2 Reversing Linked List test1.png)
 
 (第一次的问题主要应该是把数据存储到L时出现了问题，其实完全可以不使用数组进行存储，先按照输入顺序存储之后再不停循环来排序即可。)
 
-secondtry:
+#### Second try:
 
 ```c
 #include<stdio.h>
@@ -204,7 +204,7 @@ int main()
 }
 ```
 
-screenshot:
+#### ScreenShot:
 
 ![02-线性结构2 Reversing Linked List test2](提交截图/02-线性结构2 Reversing Linked List test2.png)
 
