@@ -135,3 +135,181 @@ int main()
 ![02-线性结构4 Pop Sequence test1](提交截图/02-线性结构4 Pop Sequence test1.png)
 
 想法是将每一行用一个数组存下来，再从尾部开始模拟堆栈的入栈出栈，但是似乎哪里写错了，没有一个对的。。。
+
+#### Second try:
+
+```c
+#include<stdio.h>
+#include<stdlib.h>
+
+typedef struct SNode *Stack;
+struct SNode {
+    int Data;
+    struct SNode *Next;
+};
+
+Stack CreatStack()
+{
+    Stack S;
+    S = (Stack)malloc(sizeof(struct SNode));
+    S->Next = NULL;
+    return S;
+}
+
+int IsEmpty( Stack S )
+{
+    return ( S->Next == NULL );
+}
+
+void Push( int i, Stack S )
+{
+    struct SNode *TmpCell;
+    TmpCell = (struct SNode *) malloc(sizeof(struct SNode));
+    TmpCell->Data = i;
+    TmpCell->Next = S->Next;
+    S->Next = TmpCell;
+}
+
+int Pop( Stack S )
+{
+    int i;
+    struct SNode *FirstCell;
+    if( IsEmpty(S) ) {
+        return NULL;
+    } else {
+        FirstCell = S->Next;
+        S->Next = FirstCell->Next;
+        i = FirstCell->Data;
+        free(FirstCell);
+        return i;
+    }
+}
+
+int main()
+{
+    int M, N, K;
+    scanf("%d %d %d", &M, &N, &K);
+    int List[N], Order[N];
+    int tmp, n, len, i, flag;
+    Stack S;
+    while( K-- ) {
+        n = 1;
+        len = 0;
+        flag = 1;
+        S = CreatStack();
+        for(i = 0; i < N; i++) {
+            scanf("%d", &tmp);
+            while( flag && ( IsEmpty(S) || tmp != S->Next->Data)) {
+                Push( n++, S );
+                len += 1;
+                if ( len > M ) {
+                    flag = 0;
+                    break;
+                }
+            }
+            if( flag && !IsEmpty(S) && tmp == S->Next->Data ) {
+                Pop( S );
+            }
+        }
+        if(flag) printf("YES\n");
+        else printf("NO\n");
+        free(S);
+    }
+    return 0;
+}
+```
+
+#### ScreenShot:
+
+![02-线性结构4 Pop Sequence test2](提交截图/02-线性结构4 Pop Sequence test2.png)
+
+第一次的算法里是反过来尝试的，但其实直接从第一位输入进来的时候判断是否出栈即可，如果出栈时符合条件表明这一行是可能这样输出的，反之不可能，但代码有问题，使用编译器编译尝试了之后发现是因为出栈时忘记把堆栈的长度-1了，导致无论怎么样都会出现溢出的情况。第三次解决。
+
+#### Third try:
+
+```c
+#include<stdio.h>
+#include<stdlib.h>
+
+typedef struct SNode *Stack;
+struct SNode {
+    int Data;
+    struct SNode *Next;
+};
+
+Stack CreatStack()
+{
+    Stack S;
+    S = (Stack)malloc(sizeof(struct SNode));
+    S->Next = NULL;
+    return S;
+}
+
+int IsEmpty( Stack S )
+{
+    return ( S->Next == NULL );
+}
+
+void Push( int i, Stack S )
+{
+    struct SNode *TmpCell;
+    TmpCell = (struct SNode *) malloc(sizeof(struct SNode));
+    TmpCell->Data = i;
+    TmpCell->Next = S->Next;
+    S->Next = TmpCell;
+}
+
+int Pop( Stack S )
+{
+    int i;
+    struct SNode *FirstCell;
+    if( IsEmpty(S) ) {
+        return NULL;
+    } else {
+        FirstCell = S->Next;
+        S->Next = FirstCell->Next;
+        i = FirstCell->Data;
+        free(FirstCell);
+        return i;
+    }
+}
+
+int main()
+{
+    int M, N, K;
+    scanf("%d %d %d", &M, &N, &K);
+    int List[N], Order[N];
+    int tmp, n, len, i, flag;
+    Stack S;
+    while( K-- ) {
+        n = 1;
+        len = 0;
+        flag = 1;
+        S = CreatStack();
+        for(i = 0; i < N; i++) {
+            scanf("%d", &tmp);
+            while( flag && ( IsEmpty(S) || tmp != S->Next->Data)) {
+                Push( n++, S );
+                len += 1;
+                if ( len > M ) {
+                    flag = 0;
+                    break;
+                }
+            }
+            if( flag && !IsEmpty(S) && tmp == S->Next->Data ) {
+                Pop( S );
+                len -= 1;
+            }
+        }
+        if(flag) printf("YES\n");
+        else printf("NO\n");
+        free(S);
+    }
+    return 0;
+}
+```
+
+#### ScreenShot:
+
+![02-线性结构4 Pop Sequence test3](提交截图/02-线性结构4 Pop Sequence test3.png)
+
