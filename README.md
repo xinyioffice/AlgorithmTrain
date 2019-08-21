@@ -10,3 +10,4 @@
 - [02-线性结构4 Pop Sequence(思路应该没错，代码逻辑有问题，待修改)(修改完成)](https://github.com/xinyioffice/PATtrainning/blob/master/02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%844%20Pop%20Sequence.md)
 - [03-树1 树的同构](https://github.com/xinyioffice/PATtrainning/blob/master/03-%E6%A0%911%20%E6%A0%91%E7%9A%84%E5%90%8C%E6%9E%84.md)
 - [03-树2 List Leaves(低级错误浪费2小时)](https://github.com/xinyioffice/PATtrainning/blob/master/03-%E6%A0%912%20List%20Leaves.md)
+
