@@ -10,4 +10,5 @@
 - [02-线性结构4 Pop Sequence(思路应该没错，代码逻辑有问题，待修改)(修改完成)](https://github.com/xinyioffice/PATtrainning/blob/master/02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%844%20Pop%20Sequence.md)
 - [03-树1 树的同构](https://github.com/xinyioffice/PATtrainning/blob/master/03-%E6%A0%911%20%E6%A0%91%E7%9A%84%E5%90%8C%E6%9E%84.md)
 - [03-树2 List Leaves(低级错误浪费2小时)](https://github.com/xinyioffice/PATtrainning/blob/master/03-%E6%A0%912%20List%20Leaves.md)
-
+- [03-树3 Tree Traversals Again(数组下标与压栈顺序混淆，导致数组超出范围)](https://github.com/xinyioffice/PATtrainning/blob/master/03-%E6%A0%913%20Tree%20Traversals%20Again.md)
+- [04-树7 二叉搜索树的操作集(基础题，熬夜导致各种细节出错，尽量少熬夜写)](https://github.com/xinyioffice/PATtrainning/blob/master/04-%E6%A0%917%20%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%93%8D%E4%BD%9C%E9%9B%86.md)
