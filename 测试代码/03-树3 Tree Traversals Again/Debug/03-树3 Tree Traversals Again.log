@@ -1,2 +1,6 @@
 ﻿  03-树3 Tree Traversals Again.cpp
+D:\学习笔记\数据结构与算法\PATtrainning\测试代码\03-树3 Tree Traversals Again\03-树3 Tree Traversals Again.cpp(82,26): warning C4474:  scanf_s: 格式字符串中传递的参数太多
+D:\学习笔记\数据结构与算法\PATtrainning\测试代码\03-树3 Tree Traversals Again\03-树3 Tree Traversals Again.cpp(82,26): message :  占位符和其参数预计 1 可变参数，但提供的却是 2 参数
+D:\学习笔记\数据结构与算法\PATtrainning\测试代码\03-树3 Tree Traversals Again\03-树3 Tree Traversals Again.cpp(93,28): warning C4474:  scanf_s: 格式字符串中传递的参数太多
+D:\学习笔记\数据结构与算法\PATtrainning\测试代码\03-树3 Tree Traversals Again\03-树3 Tree Traversals Again.cpp(93,28): message :  占位符和其参数预计 1 可变参数，但提供的却是 2 参数
   03-树3 Tree Traversals Again.vcxproj -> D:\学习笔记\数据结构与算法\PATtrainning\测试代码\03-树3 Tree Traversals Again\Debug\03-树3 Tree Traversals Again.exe
